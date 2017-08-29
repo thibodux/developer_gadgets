@@ -1,0 +1,283 @@
+<form onunloadCancelJobs="true" stylesheet="developer_gadgets:load.css" script="developer_gadgets:load.js">
+
+  <label>Demo</label>
+
+  <fieldset autoRun="true" submitButton="false"></fieldset>
+
+  <row>
+    <panel id="panel_intro_togglepanel">
+      <title>Introduction</title>
+      <html>
+        <p>Thank you for downloading the Developer Gadgets App for Splunk.</p>
+        <br/>
+        <p>Here is a summary of the features in this app:</p>
+        <ul>
+          <li>Accordion Panel (a.k.a. Toggle Panel) library</li>
+          <li>Dashboard Slider library
+            <ul>
+              <li>Token Debugger</li>
+              <li>Input Hiding for all inputs</li>
+              <li>Permanent Submit Button</li>
+            </ul>
+          </li>
+          <li>CSS Improvements
+            <ul>
+              <li>Footer Cleanup</li>
+              <li>Form Input Width Settings</li>
+              <li>Remove Splunk &quot;Hide Filters&quot; link</li>
+            </ul>
+          </li>
+        </ul>
+        <br/>
+        <p>You should see the first feature, the Accordion Panel, on this panel.</p>
+        <p>Note the triangle icon on the left of the title of this panel. Also you will<br/>
+           see the cursor style change if you put your mouse on the title. Click on the<br/>
+           title (or triangle icon) to activate the accordion.
+         </p>
+         <p>Click on the title of the next panel to activate it and continue.</p>
+      </html>
+    </panel>
+  </row>
+
+  <row>
+    <panel id="panel_accordion_togglepanel_true" depends="$gadget_lib_loaded$">
+      <title>Accordion Panel Details</title>
+      <html>
+        <p>The Accordion Panel library is designed to apply the feature to existing<br/>
+           Splunk panels, i.e., you don't need to instantiate a new class of view.</p>
+        <p>To turn a SimpleXML panel into an accordion panel, give the panel an<br/>
+           HTML ID that includes the string <code>_togglepanel_</code>.</p>
+        <p>By default, the accordion panel does not alter the visibility of the panel's<br/>
+           content. To hide or collapse the contents at dashboard loading, you need<br/>
+           to use the HTML ID string <code>_togglepanel_true</code>. For example, this<br/>
+           this panel is defined as <code>&lt;panel id=&quot;panel_accordion_togglepanel_true&quot;&gt;</code>.</p>
+        <p>If you are using the <code>TogglePanel</code> class in JavaScript, you convert<br/>
+           an existing panel into an Accordion panel using the following template where<br/>
+           the boolean value indicates if you want to initially hide the contents:<br/>
+           <code>new TogglePanel(&quot;&lt;PANEL_ID&gt;&quot;).setup(boolean)</code>.</p>
+        <br/>
+      </html>
+    </panel>
+  </row>
+
+  <row>
+    <panel id="panel_slider_togglepanel_true" depends="$gadget_lib_loaded$">
+      <title>Dashboard Slider Details</title>
+      <html>
+        <p>The Dashboard Slider library creates the &quot;Gadgets&quot; widget<br/>
+           you should see in the bottom right of the screen.</p>
+        <p>Click on the title or triangle icon to trigger the Dashboard Slider.<br/></p>
+
+        <p>The Dashboard Slider includes three components for developers and users.</p>
+        <ol>
+          <li>&quot;Enable Debug&quot; toggle</li>
+          <li>&quot;Hide Inputs&quot; toggle</li>
+          <li>Submit button</li>
+        </ol>
+
+        <p>These components are extensions to existing SimpleXML and do not change any core functions.</p>
+        <h3>Debugger</h3>
+        <p>When set the &quot;Enable Debug&quot; checkbox will define a token named &quot;show_debug&quot;,<br/>
+           and it reveals the Token Debugger from the <a target="_blank" rel="noopener noreferrer" href="https://splunkbase.splunk.com/app/1603/">Splunk 6.x Dashboard Examples App for Splunk</a>.<br/>
+           Here is a reference <a target="_blank" rel="noopener noreferrer" href="https://blog.octoinsight.com/base-search-and-token-debugging-in-splunk-dashboards/">article</a> I wrote describing some uses of this feature when developing dashboards.</p>
+
+        <h3>Hide Inputs</h3>
+        <p>When set the &quot;Hide Inputs&quot; checkbox will define a token named &quot;hide_inputs&quot;,<br/>
+           and it hides all <code>&lt;fieldset&gt;</code> elements in the Splunk dashboard, i.e.,<br/>
+           all form inputs at the top of the dashboard and inside panels will be made invisible.</p>
+
+        <h3>Submit Button</h3>
+        <p>The Submit Button in the Gadget Dashboard Slider emulates the Submit button often found<br/>
+          at the top of the dashboard. It has no other side effects.</p>
+      </html>
+    </panel>
+  </row>
+
+  <row>
+    <panel id="panel_css_togglepanel_true" depends="$gadget_lib_loaded$">
+      <title>CSS Improvements Details</title>
+      <html>
+         <p>This app includes some CSS settings that help developers with little things.</p>
+         <p>All of these are defined in this app's <code>load.css</code> file.</p>
+
+         <h3>Footer Cleanup</h3>
+         <p>The Splunk dashboard default footer includes links to Splunk support resources<br/>
+            in the left-hand corner and the Splunk copyright statement in the right-hand corner.<br/>
+            The included CSS settings hide the former and keep the latter. This is intended<br/>
+            to prevent any confusion between Splunk support and support resources offered<br/>
+            by app / dashboard developer.</p>
+
+        <h3>Form Input Width Settings</h3>
+        <p>Included in this app's CSS settings are changes to the settings of dropdowns,<br/>
+           text boxes, and multi-select boxes that allow developers to override their default<br/>
+           width with a single CSS change to the <code>width</code> of the top-level form<br/>
+           input. Without these changes, developers are required to make multiple changes.</p>
+
+        <h3>Remove Splunk &quot;Hide Filters&quot; link</h3>
+        <p>This app includes a CSS setting to obscure the &quot;Hide Filters&quot; link.<br/>
+           Starting with Splunk 6.5, this link appeared in the top-level input area of a<br/>
+           dashboard. This link toggles the visibility of the <code>&lt;fieldset&gt;</code> element<br/>
+           in the top of the dashboard, but it does not affect input elements in panels.<br/>
+           With the addition of the &quot;Hide Inputs&quot; feature in the Dashboard Slider<br/>
+           panel in this app, this Splunk-made link becomes redundant and less functional.</p>
+      </html>
+    </panel>
+  </row>
+
+  <row>
+    <panel id="panel_use_togglepanel_true" depends="$gadget_lib_loaded$">
+      <title>Using in your Apps / Dashboards</title>
+      <html>
+        <p>If you want to use the custom CSS or JavaScript libraries from this app in your Splunk<br/>
+          dashboards, you must include the top-level app files <code>load.css</code> and <code>load.js</code>,<br/>
+          respectively. Note, these files are independent, i.e., you don't have to include both.</p>
+        <br/>
+        <p>In the case of SimpleXML, update the top-level XML to pull in the files, e.g.,<br/>
+          <code>&lt;dashboard stylesheet=&quot;developer_gadgets:load.css&quot; script=&quot;developer_gadgets:load.js&quot;&gt;</code><br/>
+          or<br/>
+          <code>&lt;form stylesheet="developer_gadgets:load.css" script="developer_gadgets:load.js"&gt;</code></p>
+        <br/>          
+        <p>For HTML dashboards, you must add the following element before the closing <code>&lt;/body&gt;</code> tag,<br/>
+          <code>&lt;script src=&quot;{{SPLUNKWEB_URL_PREFIX}}/static/app/developer_gadgets/load.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;</code>,<br/>
+          and this should go before the closing <code>&lt;/head&gt;</code> tag,<br/>
+          <code>&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; media=&quot;all&quot; href=&quot;{{SPLUNKWEB_URL_PREFIX}}/static/app/developer_gadgets/load.css&quot;/&gt;</code></p>
+        <br/>
+        <p>You are encouraged to copy, edit, and re-purpose parts of this app to suit your own needs.<br/>
+          All of the pieces have been in use across versions of Splunk 6.x in my own production<br/>
+          <a target="_blank" rel="noopener noreferrer" href="https://splunkbase.splunk.com/app/3171/">Layer8Insight App for Splunk</a>.</p>
+        <p>Integrating the pieces into your own apps will mandate updates to RequireJS paths and<br/>
+          folder names in source files, e.g., replace &quot;developer_gadgets&quot; with your app's folder<br/>
+          name. Reach me on Github or Splunk Answers for any help with copying pieces into your app.</p>
+        <p><b>NOTE:</b> it is recommended that you incorporate this app's Accordion Panel library<br/>
+          directly into your app to improve performance (e.g., put the Accordion Panel wrapper code<br/>
+          in your dashboard.js file). Splunk significantly changed how it renders JavaScript in version 6.5,<br/>
+          so the auto discovery of panels is not as fast as it used to be when loading files from a<br/>
+          different app. This app includes a custom token named <code>gadget_lib_loaded</code> that<br/>
+          indicates when the library is loaded. You can use this token to hide / show HTML elements<br/>
+          based on when the library is loaded using <code>depends</code>.</p>
+      </html>
+    </panel>
+  </row>
+
+  <row>
+    <panel id="panel_demo_togglepanel_true" depends="$gadget_lib_loaded$">
+      <title>Real Example with Visual Elements</title>
+      <input searchWhenChanged="true" type="time">
+        <label>Search Period</label>
+        <default>
+          <earliest>-7d@d</earliest>
+          <latest>now</latest>
+        </default>
+      </input>
+      <input id="filter_index" type="dropdown" token="filter_index" searchWhenChanged="true">
+        <label>Indexes to Include</label>
+        <choice value="*&quot; OR index=&quot;_*">All Indexes</choice>
+        <choice value="_*">Internal Indexes</choice>
+        <choice value="*">Non-internal Indexes</choice>
+        <allowCustomValues>true</allowCustomValues>
+        <showClearButton>false</showClearButton>
+        <initialValue>*</initialValue>
+        <search>
+          <query>
+            | rest /services/data/indexes
+            | dedup title
+            | rename title as index
+            | sort index
+          </query>
+        </search>
+        <fieldForLabel>index</fieldForLabel>
+        <fieldForValue>index</fieldForValue>
+      </input>
+      <table>
+        <title>Index Summary</title>
+        <search>
+          <query>
+            | tstats count as count latest(_time) as latest where index="$filter_index$" by index
+            | sort 10 -count
+            | eval latest = strftime(latest, "%Y-%m-%d %H:%M:%S %Z")
+            | fields index count latest
+            | eval index = if(match(index, "^_"), "Internal" + index, index)
+            | rename index as Index, latest as "Latest Event", count as "# Events in search period"
+          </query>
+        </search>
+        <option name="wrap">true</option>
+        <option name="drilldown">none</option>
+        <option name="count">10</option>
+      </table>
+      <table>
+        <title>Host Summary</title>
+        <search>
+          <query>
+            | tstats count as count latest(_time) as latest where index="$filter_index$" by host
+            | sort 10 -count
+            | eval latest = strftime(latest, "%Y-%m-%d %H:%M:%S %Z")
+            | fields host count latest
+            | rename host as Hndex, latest as "Latest Event", count as "# Events in search period"
+          </query>
+        </search>
+        <option name="wrap">true</option>
+        <option name="drilldown">none</option>
+        <option name="count">10</option>
+      </table>
+      <chart>
+        <title>Events over Time</title>
+        <search>
+          <query>
+            | tstats prestats=t count as count where index="$filter_index$" by index _time span=1h
+            | timechart useother=f span=1h count as count by index
+            | rename "VALUE_*" as "Internal_*"
+          </query>
+        </search>
+        <option name="charting.chart">line</option>
+        <option name="charting.axisTitleX.visibility">collapsed</option>
+        <option name="charting.axisTitleY.visibility">visible</option>
+        <option name="charting.chart.stackMode">default</option>
+        <option name="charting.axisY.minimumNumber">0</option>
+        <option name="charting.chart.nullValueMode">zero</option>
+        <option name="charting.drilldown">none</option>
+        <option name="charting.legend.labelStyle.overflowMode">ellipsisMiddle</option>
+        <option name="charting.legend.placement">right</option>
+        <option name="charting.axisTitleY.text">Event Count</option>
+      </chart>
+    </panel>
+  </row>
+
+  <row depends="$hiddenCSS$">
+    <html>
+      <style>
+        .splunk-choice-input {
+          padding-bottom: 2px !important;
+        }
+        .fieldset {
+          padding-bottom: 2px;
+        }
+        #panel_intro_togglepanel .fieldset {
+          display:none !important;
+        }
+        #panel_accordion_togglepanel_true .fieldset {
+          display:none !important;
+        }
+        #panel_slider_togglepanel_true .fieldset {
+          display:none !important;
+        }
+        #panel_css_togglepanel_true .fieldset {
+          display:none !important;
+        }
+        #panel_use_togglepanel_true .fieldset {
+          display:none !important;
+        }
+        h3 {
+          margin-bottom: 2px;
+        }
+        #filter_index {
+          width: 150px;
+        }
+        .dashboard-row .dashboard-panel .panel-head h3 {
+          padding-bottom: 0px;
+          padding-top: 25px;
+        }
+      </style>
+    </html>
+  </row>
+
+</form>

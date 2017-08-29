@@ -1,0 +1,7 @@
+#
+# Default permissions are permissive
+#
+
+[]
+access = read : [ * ], write : [ admin, power ]
+export = none

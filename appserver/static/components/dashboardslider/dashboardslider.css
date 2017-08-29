@@ -1,0 +1,74 @@
+/*
+ * Copyright (c) 2016-2017, OctoInsight Inc., All rights reserved.
+ * Authored by Ryan Thibodeaux
+ * see included LICENSE file (BSD 3-clause)
+ */
+
+.db-slider-container {
+  font-family: Arial, Helvetica, Arial, sans-serif;
+  border-top: 3px solid slateblue;
+  border-right: 3px solid slateblue;
+  border-left: 1px solid slateblue;
+  position: fixed;
+  width: 150px;
+  z-index: 10000;
+  height: 125px;
+  color: #000;
+  display: flex;
+  background: #b2b6ba;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  right: 0;
+  left: 0;
+  margin-right: 40px;
+  margin-left: auto;
+}
+
+.db-slider-header {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  justify-content: center;
+  margin: 5px 0px;
+  height: 30px;
+  vertical-align: middle;
+  width: inherit;
+  position: absolute;
+  cursor: pointer;
+}
+
+.db-slider-up {
+  bottom: 0px !important;
+}
+
+.db-slider-down {
+  bottom: -100px !important;
+}
+
+.db-slider-container > .db-slider-header > .uparrow:before {
+  content: "\25B2";
+  cursor: pointer;
+  margin-left: -25px;
+  margin-right: 8px;
+}
+
+.db-slider-container > .db-slider-header > .downarrow:before {
+  content: "\25Bc";
+  cursor: pointer;
+  margin-left: -25px;
+  margin-right: 8px;
+}
+
+.db-slider-content {
+  position: relative;
+  margin: 35px auto auto auto;
+}
+
+.db-slider-content > .splunk-choice-input {
+  padding-bottom: 2px;
+}
+
+.db-slider-content > button {
+  margin-top: 5px;
+  margin-left: 14px;
+}
