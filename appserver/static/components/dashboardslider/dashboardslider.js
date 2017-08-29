@@ -1,7 +1,7 @@
 /**
  * @fileoverview Class definition for Dashboard Slider gadget
  * @author Ryan Thibodeaux
- * @version 1.0.0
+ * @version 1.0.1
  */
 
 /*
@@ -37,30 +37,35 @@
     "splunkjs/mvc/simplexml/ready!"
   ], function($, _, Backbone, mvc, CheckboxGroupView) {
 
+    const ENABLE_DEBUG_TOKEN = "show_debug";   // token name for enable debug setting
+    const HIDE_INPUTS_TOKEN  = "hide_inputs";  // token name for input hiding setting
     var toggledInputContainers = undefined;
 
     // handle checkbox token changes
     function checkboxbHandler(value) {
       var defaultTokenModel = mvc.Components.get('default');
       var submittedTokenModel = mvc.Components.get('submitted');
-      var debugEnabled = (typeof submittedTokenModel.get('show_debug') === 'undefined' ? false : true);
-      var hideEnabled  = (typeof submittedTokenModel.get('hide_inputs') === 'undefined' ? false : true);
+      var debugEnabled = (typeof submittedTokenModel.get(ENABLE_DEBUG_TOKEN) === 'undefined' ? false : true);
+      var hideEnabled  = (typeof submittedTokenModel.get(HIDE_INPUTS_TOKEN) === 'undefined' ? false : true);
 
       // toggle debug token based on checkbox state
       if (value.indexOf('debug') >= 0) { // debug checkbox is checked
         if (!debugEnabled) {
-          submittedTokenModel.set('show_debug', "true");
+          defaultTokenModel.set(ENABLE_DEBUG_TOKEN, "true");
+          submittedTokenModel.set(ENABLE_DEBUG_TOKEN, "true");
         }
       } else { // debug checkbox is not checked
         if (debugEnabled) {
-          submittedTokenModel.set('show_debug', undefined);
+          defaultTokenModel.set(ENABLE_DEBUG_TOKEN, undefined);
+          submittedTokenModel.set(ENABLE_DEBUG_TOKEN, undefined);
         }
       }
 
       // toggle visibility of inputs based on checkbox state
       if (value.indexOf('hideinputs') >= 0) { // hide inputs checkbox is checked
         if (!hideEnabled) {
-          submittedTokenModel.set('hide_inputs', "true");
+          defaultTokenModel.set(HIDE_INPUTS_TOKEN, "true");
+          submittedTokenModel.set(HIDE_INPUTS_TOKEN, "true");
           toggledInputContainers = $('.fieldset:visible');
           if (toggledInputContainers.length) {
             toggledInputContainers.hide();
@@ -68,7 +73,8 @@
         }
       } else { // hide inputs checkbox is not checked
         if (hideEnabled) {
-          submittedTokenModel.set('hide_inputs', undefined);
+          defaultTokenModel.set(HIDE_INPUTS_TOKEN, undefined);
+          submittedTokenModel.set(HIDE_INPUTS_TOKEN, undefined);
           if (toggledInputContainers.length) {
             toggledInputContainers.show();
             toggledInputContainers = undefined;

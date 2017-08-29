@@ -20,7 +20,7 @@
 
 ## Overview
 
-The Developer Gadgets App App for Splunk is a library to extend Splunk dashboards with tools and features to help dashboard developers.
+The Developer Gadgets App for Splunk is a set of libraries to extend Splunk dashboards with tools and features to help dashboard developers.
 
 Here is a summary of the features in this app:
 
@@ -54,6 +54,12 @@ Folder Name: developer_gadgets<br/>
 
 
 ### Release Notes
+
+#### v1.0.1
+
+- Improved token handling in Drilldown Slider library
+- Fixed typo in README
+- Updated comments in TogglePanel class file
 
 #### v1.0.0
 

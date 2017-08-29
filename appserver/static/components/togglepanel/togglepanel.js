@@ -1,3 +1,9 @@
+/**
+ * @fileoverview Class definition for TogglePanel or Accordion panel feature
+ * @author Ryan Thibodeaux
+ * @version 1.0.0
+ */
+
 /*
  * Copyright (c) 2016-2017, OctoInsight Inc., All rights reserved.
  * Authored by Ryan Thibodeaux
@@ -7,9 +13,7 @@
 /*
  * Definition of custom TogglePanel class.
  * This turns a Splunk "panel" element into
- * a toggle-able element that is controlled
- * by a HTML element at the beginning of the
- * panel's title and the panel title itself.
+ * an Accordion panel or toggle-able panel.
  *
  * NOTE: this is not an extension of the panel
  * base class; instead, it allows one to retroactively
