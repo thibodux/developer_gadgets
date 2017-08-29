@@ -136,14 +136,14 @@
           <code>&lt;dashboard stylesheet=&quot;developer_gadgets:load.css&quot; script=&quot;developer_gadgets:load.js&quot;&gt;</code><br/>
           or<br/>
           <code>&lt;form stylesheet="developer_gadgets:load.css" script="developer_gadgets:load.js"&gt;</code></p>
-        <br/>          
+        <br/>
         <p>For HTML dashboards, you must add the following element before the closing <code>&lt;/body&gt;</code> tag,<br/>
           <code>&lt;script src=&quot;{{SPLUNKWEB_URL_PREFIX}}/static/app/developer_gadgets/load.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;</code>,<br/>
           and this should go before the closing <code>&lt;/head&gt;</code> tag,<br/>
           <code>&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; media=&quot;all&quot; href=&quot;{{SPLUNKWEB_URL_PREFIX}}/static/app/developer_gadgets/load.css&quot;/&gt;</code></p>
         <br/>
         <p>You are encouraged to copy, edit, and re-purpose parts of this app to suit your own needs.<br/>
-          All of the pieces have been in use across versions of Splunk 6.x in my own production<br/>
+          All of the pieces have been in use across versions of Splunk 6.x in the own production<br/>
           <a target="_blank" rel="noopener noreferrer" href="https://splunkbase.splunk.com/app/3171/">Layer8Insight App for Splunk</a>.</p>
         <p>Integrating the pieces into your own apps will mandate updates to RequireJS paths and<br/>
           folder names in source files, e.g., replace &quot;developer_gadgets&quot; with your app's folder<br/>
