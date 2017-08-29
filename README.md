@@ -36,10 +36,10 @@ Here is a summary of the features in this app:
 
 ### About
 
-Author: Ryan Thibodeaux 
-Version: 1.0.0 
-License: BSD 3-clause "New" or "Revised" License 
-Folder Name: developer_gadgets 
+Author: Ryan Thibodeaux<br/>
+Version: 1.0.0<br/>
+License: BSD 3-clause "New" or "Revised" License<br/>
+Folder Name: developer_gadgets<br/>
 
 
 | Splunk Components | Added?|
