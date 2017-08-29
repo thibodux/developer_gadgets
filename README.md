@@ -149,15 +149,12 @@ The Dashboard Slider includes three components for developers and users.
 
 These components are extensions to existing SimpleXML and do not change any core functions.
 
-**Debugger**
-When set the "Enable Debug" checkbox will define a token named "show_debug", and it reveals the Token Debugger from the Splunk 6.x Dashboard Examples App for Splunk.
+**Debugger:** When set the "Enable Debug" checkbox will define a token named "show_debug", and it reveals the Token Debugger from the Splunk 6.x Dashboard Examples App for Splunk.
 
-**Hide Inputs**
-When set the "Hide Inputs" checkbox will define a token named "hide_inputs",
+**Hide Inputs:** When set the "Hide Inputs" checkbox will define a token named "hide_inputs",
 and it hides all `<fieldset>` elements in the Splunk dashboard, i.e., all form inputs at the top of the dashboard and inside panels will be made invisible.
 
-**Submit Button**
-The Submit Button in the Gadget Dashboard Slider emulates the Submit button often found at the top of the dashboard. It has no other side effects.
+**Submit Button:** The Submit Button in the Gadget Dashboard Slider emulates the Submit button often found at the top of the dashboard. It has no other side effects.
 
 #### CSS Improvements
 
@@ -165,14 +162,11 @@ This app includes some CSS settings that help developers with little things.
 
 All of these are defined in this app's load.css file.
 
-**Footer Cleanup**
-Removes the left-hand footer from Splunk dashboards that includes Spunk-specific Support links.
+**Footer Cleanup:** Removes the left-hand footer from Splunk dashboards that includes Spunk-specific Support links.
 
-**Form Input Width Settings**
-Changes CSS settings for Splunk dropdowns, text boxes, and multi-select boxes to make it easier to allow developers to override their default width with a single CSS change to the `width` of the top-level form input. 
+**Form Input Width Settings: ** Changes CSS settings for Splunk dropdowns, text boxes, and multi-select boxes to make it easier to allow developers to override their default width with a single CSS change to the `width` of the top-level form input. 
 
-**Remove Splunk "Hide Filters" link**
-Obfuscates the "Hide Filters" link that appears in Splunk dashboards staring in Splunk 6.5.
+**Remove Splunk "Hide Filters" link: ** Obfuscates the "Hide Filters" link that appears in Splunk dashboards staring in Splunk 6.5.
 
 #### Loading the Libraries
 
