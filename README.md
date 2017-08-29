@@ -164,9 +164,9 @@ All of these are defined in this app's load.css file.
 
 **Footer Cleanup:** Removes the left-hand footer from Splunk dashboards that includes Spunk-specific Support links.
 
-**Form Input Width Settings: ** Changes CSS settings for Splunk dropdowns, text boxes, and multi-select boxes to make it easier to allow developers to override their default width with a single CSS change to the `width` of the top-level form input. 
+**Form Input Width Settings:** Changes CSS settings for Splunk dropdowns, text boxes, and multi-select boxes to make it easier to allow developers to override their default width with a single CSS change to the `width` of the top-level form input. 
 
-**Remove Splunk "Hide Filters" link: ** Obfuscates the "Hide Filters" link that appears in Splunk dashboards staring in Splunk 6.5.
+**Remove Splunk "Hide Filters" link:** Obfuscates the "Hide Filters" link that appears in Splunk dashboards staring in Splunk 6.5.
 
 #### Loading the Libraries
 
