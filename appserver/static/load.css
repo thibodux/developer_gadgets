@@ -39,21 +39,21 @@ a.hide-global-filters {
    `width` CSS setting for the top-level class or HTML ID */
 
 /* internal piece of text inputs */
-.input-text > div > input[type=text] {
+.input-text > div input[type=text] {
   width: 90% !important;
   max-width: 90% !important;
   min-width: 90% !important;
 }
 
 /* internal piece of dropdown inputs */
-.input-dropdown > .splunk-dropdown > .select2-container {
+.input-dropdown > .splunk-dropdown > div {
   width: 100% !important;
   max-width: 100% !important;
   min-width: 100% !important;
 }
 
 /* internal piece of multiselect inputs */
-.input-multiselect > div > .select2-container-multi {
+.input-multiselect > div > div {
   width: 100% !important;
   max-width: 100% !important;
   min-width: 100% !important;
