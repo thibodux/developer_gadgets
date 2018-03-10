@@ -5,7 +5,7 @@
  */
 
 /*
- * Copyright (c) 2017, Ryan Thibodeaux. All Rights Reserved
+ * Copyright (c) 2017-2018, Ryan Thibodeaux. All Rights Reserved
  * see included LICENSE file (BSD 3-clause) in the app's root directory
  */
 
