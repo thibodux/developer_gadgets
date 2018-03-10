@@ -1,11 +1,11 @@
 /**
  * @fileoverview Class definition for Dashboard Slider gadget
  * @author Ryan Thibodeaux
- * @version 1.0.1
+ * @version 1.1.0
  */
 
 /*
- * Copyright (c) 2016-2017, OctoInsight Inc., All rights reserved.
+ * Copyright (c) 2016-2018, OctoInsight Inc., All rights reserved.
  * Authored by Ryan Thibodeaux
  * see included LICENSE file (BSD 3-clause)
  */
@@ -117,6 +117,8 @@
           checkboxbHandler(value);
         });
 
+        cb.$('.splunk-choice-input-message').hide();
+
         return this;
       },
 
@@ -163,7 +165,7 @@
                   '</div>' +
                   '<div class="db-slider-content">' +
                     '<div id="db-slider-checkbox" style="width: auto;"></div>' +
-                    '<button class="btn btn-primary submit" id="db-slider-submit"><span>Submit</span></button>' +
+                    '<button class="btn-app-submit" id="db-slider-submit"><span>Submit</span></button>' +
                   '</div>' +
                 '</div>'
     });
