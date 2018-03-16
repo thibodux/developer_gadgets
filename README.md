@@ -89,11 +89,11 @@ Skip this if you downloaded the app from Splunkbase.
 
 Assuming you are checking out the source from Github, here are the steps to build the app tarball to then install in Splunk (assumes Linux or Mac). Note, make sure you keep the top-level repo folder name as "developer_gadgets" or you will potentially build a poorly structured application package.
 
-```
-$ cd <ROOT_DIRECTORY_OF_YOUR_CHOICE>
-$ git clone https://github.com/thibodux/developer_gadgets developer_gadgets
-$ tar c --exclude='.git' --exclude='.gitignore' developer_gadgets > developer_gadgets.tar
-$ gzip -q developer_gadgets.tar
+```bash
+cd <ROOT_DIRECTORY_OF_YOUR_CHOICE>
+git clone https://github.com/thibodux/developer_gadgets developer_gadgets
+tar c --exclude='.git' --exclude='.gitignore' developer_gadgets > developer_gadgets.tar
+gzip -q developer_gadgets.tar
 ```
 
 ### Software requirements
@@ -182,7 +182,7 @@ In the case of SimpleXML, update the top-level XML to pull in the files, e.g.,
 
 `<dashboard stylesheet="developer_gadgets:load.css" script="developer_gadgets:load.js">` 
 
-OR 
+or
 
 `<form stylesheet="developer_gadgets:load.css" script="developer_gadgets:load.js">` 
 
