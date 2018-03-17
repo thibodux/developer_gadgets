@@ -37,7 +37,7 @@ Here is a summary of the features in this app:
 ### About
 
 Author: Ryan Thibodeaux<br/>
-Version: 1.0.0<br/>
+Version: 1.1.0<br/>
 License: BSD 3-clause "New" or "Revised" License<br/>
 Folder Name: developer_gadgets<br/>
 
@@ -54,6 +54,16 @@ Folder Name: developer_gadgets<br/>
 
 
 ### Release Notes
+
+#### v1.1.0
+
+- CSS updates
+    - Made input width settings more generic
+    - Made Submit button definition more independent
+    - Made checkbox group in dashboard slider more independent 
+- Updated copyright year
+- Changed navigation bar color
+
 
 #### v1.0.1
 
@@ -77,7 +87,7 @@ This app and the author's content are released under the BSD 3-Clause "New" or "
 
 The Dashboard Slider and Toggle Panel libraries are under copyright of OctoInisght Inc. (previously included in the Layer8Insight App for Splunk), and was authored by this app's author, Ryan Thibodeaux.
 
-The token debugger component of this app comes from a public Splunk app (Splunk 6.x Dashboard Examples App for Splunk) that does not have any copyright or licensing associated with it. An inquiry has been made to Splunk about the licensing of this component and others in their public apps since there are some inconsistencies compared to other public apps they release under the MIT license.
+The token debugger component of this app comes from a public Splunk app (Splunk Dashboard Examples App for Splunk) that does not have any copyright or licensing associated with it. An inquiry has been made to Splunk about the licensing of this component and others in their public apps since there are some inconsistencies compared to other public apps they release under the MIT license.
 
 -----
 

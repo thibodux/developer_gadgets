@@ -1,4 +1,4 @@
-// Modified version of Splunk 6.x Dashboard Examples App for Splunk
+// Modified version of Splunk Dashboard Examples App for Splunk
 // file showtokens.js (see https://splunkbase.splunk.com/app/1603)
 //
 // Edited by: Ryan Thibodeaux
