@@ -5,7 +5,7 @@
  */
 
 /*
- * Copyright (c) 2016-2017, OctoInsight Inc., All rights reserved.
+ * Copyright (c) 2016-2018, OctoInsight Inc., All rights reserved.
  * Authored by Ryan Thibodeaux
  * see included LICENSE file (BSD 3-clause)
  */

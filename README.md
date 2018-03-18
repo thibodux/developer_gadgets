@@ -37,7 +37,7 @@ Here is a summary of the features in this app:
 ### About
 
 Author: Ryan Thibodeaux<br/>
-Version: 1.0.0<br/>
+Version: 1.1.0<br/>
 License: BSD 3-clause "New" or "Revised" License<br/>
 Folder Name: developer_gadgets<br/>
 
@@ -54,6 +54,16 @@ Folder Name: developer_gadgets<br/>
 
 
 ### Release Notes
+
+#### v1.1.0
+
+- CSS updates
+    - Made input width settings more generic
+    - Made Submit button definition more independent
+    - Made checkbox group in dashboard slider more independent 
+- Updated copyright year
+- Changed navigation bar color
+
 
 #### v1.0.1
 
@@ -77,7 +87,7 @@ This app and the author's content are released under the BSD 3-Clause "New" or "
 
 The Dashboard Slider and Toggle Panel libraries are under copyright of OctoInisght Inc. (previously included in the Layer8Insight App for Splunk), and was authored by this app's author, Ryan Thibodeaux.
 
-The token debugger component of this app comes from a public Splunk app (Splunk 6.x Dashboard Examples App for Splunk) that does not have any copyright or licensing associated with it. An inquiry has been made to Splunk about the licensing of this component and others in their public apps since there are some inconsistencies compared to other public apps they release under the MIT license.
+The token debugger component of this app comes from a public Splunk app ([Splunk Dashboard Examples](https://splunkbase.splunk.com/app/1603/)) that does not have any copyright or licensing associated with. An inquiry has been made to Splunk about the licensing of this component and others in their public apps since there are some inconsistencies compared to other public apps they release under the MIT license.
 
 -----
 
@@ -89,11 +99,11 @@ Skip this if you downloaded the app from Splunkbase.
 
 Assuming you are checking out the source from Github, here are the steps to build the app tarball to then install in Splunk (assumes Linux or Mac). Note, make sure you keep the top-level repo folder name as "developer_gadgets" or you will potentially build a poorly structured application package.
 
-```
-$ cd <ROOT_DIRECTORY_OF_YOUR_CHOICE>
-$ git clone https://github.com/thibodux/developer_gadgets developer_gadgets
-$ tar c --exclude='.git' --exclude='.gitignore' developer_gadgets > developer_gadgets.tar
-$ gzip -q developer_gadgets.tar
+```bash
+cd <ROOT_DIRECTORY_OF_YOUR_CHOICE>
+git clone https://github.com/thibodux/developer_gadgets developer_gadgets
+tar c --exclude='.git' --exclude='.gitignore' developer_gadgets > developer_gadgets.tar
+gzip -q developer_gadgets.tar
 ```
 
 ### Software requirements
@@ -182,7 +192,7 @@ In the case of SimpleXML, update the top-level XML to pull in the files, e.g.,
 
 `<dashboard stylesheet="developer_gadgets:load.css" script="developer_gadgets:load.js">` 
 
-OR 
+or
 
 `<form stylesheet="developer_gadgets:load.css" script="developer_gadgets:load.js">` 
 
