@@ -87,7 +87,7 @@ This app and the author's content are released under the BSD 3-Clause "New" or "
 
 The Dashboard Slider and Toggle Panel libraries are under copyright of OctoInisght Inc. (previously included in the Layer8Insight App for Splunk), and was authored by this app's author, Ryan Thibodeaux.
 
-The token debugger component of this app comes from a public Splunk app (Splunk Dashboard Examples App for Splunk) that does not have any copyright or licensing associated with it. An inquiry has been made to Splunk about the licensing of this component and others in their public apps since there are some inconsistencies compared to other public apps they release under the MIT license.
+The token debugger component of this app comes from a public Splunk app ([Splunk Dashboard Examples](https://splunkbase.splunk.com/app/1603/)) that does not have any copyright or licensing associated with. An inquiry has been made to Splunk about the licensing of this component and others in their public apps since there are some inconsistencies compared to other public apps they release under the MIT license.
 
 -----
 
