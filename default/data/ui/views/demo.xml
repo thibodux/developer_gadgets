@@ -78,7 +78,7 @@
         <p>These components are extensions to existing SimpleXML and do not change any core functions.</p>
         <h3>Debugger</h3>
         <p>When set the &quot;Enable Debug&quot; checkbox will define a token named &quot;show_debug&quot;,<br/>
-           and it reveals the Token Debugger from the <a target="_blank" rel="noopener noreferrer" href="https://splunkbase.splunk.com/app/1603/">Splunk 6.x Dashboard Examples App for Splunk</a>.<br/>
+           and it reveals the Token Debugger from the <a target="_blank" rel="noopener noreferrer" href="https://splunkbase.splunk.com/app/1603/">Splunk Dashboard Examples app</a>.<br/>
            Here is a reference <a target="_blank" rel="noopener noreferrer" href="https://blog.octoinsight.com/base-search-and-token-debugging-in-splunk-dashboards/">article</a> I wrote describing some uses of this feature when developing dashboards.</p>
 
         <h3>Hide Inputs</h3>
